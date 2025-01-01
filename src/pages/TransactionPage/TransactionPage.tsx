@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, Stack } from "@mui/material";
 import { TransactionsTable } from "../../components/TransactionsTable/TransactionsTable";
 import { TableActionButton } from "../../components/ActionButtons/TableActionButton/TableActionButton";
 
@@ -11,14 +11,18 @@ export function TransactionsPage() {
   }
   return (
     <Box>
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        sx={{ width: "100%", marginTop: "50px", paddingInline: "20px" }}
+      <Stack
+        direction="row"
+        spacing={2}
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center",
+          margin: "20px",
+        }}
       >
         <TableActionButton label="Пошук" handleAction={handleOpenForm} />
         <TableActionButton label="Додати" handleAction={handleOpenForm} />
-      </Box>
+      </Stack>
       <Paper sx={{ width: "100%", marginTop: "50px" }}>
         <TransactionsTable />
       </Paper>

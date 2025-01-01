@@ -9,12 +9,14 @@ export const theme = createTheme({
           height: "35px",
           width: "100px",
           fontSize: "12px",
+          textTransform: "none",
         },
       },
     },
     MuiTableCell: {
       styleOverrides: {
         root: {
+          border: "none",
           backgroundColor: "#FF6600",
           "&:hover": {
             backgroundColor: "#ff7f50",
@@ -27,6 +29,9 @@ export const theme = createTheme({
         root: {
           "& .greenCell": {
             backgroundColor: "#28a745",
+          },
+          "& .redCell": {
+            backgroundColor: "#ff0000",
           },
           "& .orangeCell": {
             backgroundColor: "#FF6600",

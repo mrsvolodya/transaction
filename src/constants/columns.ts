@@ -1,10 +1,10 @@
 export const columns = [
-  "Operation",
-  "Currency 1",
-  "Amount 1",
-  "Currency 2",
-  "Amount 2",
-  "Rate",
-  "Time",
-  "Client",
+  "Oперація",
+  "Валюта 1",
+  "Сума 1",
+  "Валюта 2",
+  "Сума 2",
+  "Курс",
+  "Час",
+  "Клієнт",
 ];
