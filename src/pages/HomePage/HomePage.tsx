@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { RoleButton } from "../../components/ActionButtons/RoleButton/RoleButton";
+import { Outlet } from "react-router-dom";
 
 export function HomePage() {
   return (
@@ -17,6 +18,7 @@ export function HomePage() {
           <RoleButton role="user" />
           <RoleButton role="admin" />
         </Box>
+        <Outlet />
       </main>
     </Box>
   );

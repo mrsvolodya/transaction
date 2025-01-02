@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Box, Paper, Stack } from "@mui/material";
 import { TransactionsTable } from "../../components/TransactionsTable/TransactionsTable";
 import { TableActionButton } from "../../components/ActionButtons/TableActionButton/TableActionButton";
+import { Navigation } from "../../components/Navigation/Navigation";
 
 export function TransactionsPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -26,6 +27,8 @@ export function TransactionsPage() {
       <Paper sx={{ width: "100%", marginTop: "50px" }}>
         <TransactionsTable />
       </Paper>
+
+      <Navigation />
     </Box>
   );
 }

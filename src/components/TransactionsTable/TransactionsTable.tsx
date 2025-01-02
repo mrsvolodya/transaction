@@ -34,12 +34,12 @@ export function TransactionsTable() {
           backgroundColor: "#3737E2",
           "@media (max-width: 390px)": {
             minWidth: "auto",
-            width: "100%",
+            width: "auto",
             fontSize: "12px",
             overflowX: "auto",
             display: "block",
             "& td, & th": {
-              fontSize: "10px",
+              fontSize: "12px",
             },
           },
         }}
@@ -69,13 +69,13 @@ export function TransactionsTable() {
                 <TableCell className={operationClass}>
                   {trans.operation}
                 </TableCell>
-                <TableCell className="orangeCell">{trans.currency1}</TableCell>
-                <TableCell className="orangeCell">{trans.amount1}</TableCell>
-                <TableCell className="orangeCell">{trans.currency2}</TableCell>
-                <TableCell className="orangeCell">{trans.amount2}</TableCell>
+                <TableCell>{trans.currency1}</TableCell>
+                <TableCell>{trans.amount1}</TableCell>
+                <TableCell>{trans.currency2}</TableCell>
+                <TableCell>{trans.amount2}</TableCell>
                 <TableCell className="rateCell">{trans.rate}</TableCell>
-                <TableCell className="orangeCell">{trans.time}</TableCell>
-                <TableCell className="orangeCell">{trans.client}</TableCell>
+                <TableCell>{trans.time}</TableCell>
+                <TableCell>{trans.client}</TableCell>
               </TableRow>
             );
           })}

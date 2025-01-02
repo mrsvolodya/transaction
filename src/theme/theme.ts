@@ -33,11 +33,8 @@ export const theme = createTheme({
           "& .redCell": {
             backgroundColor: "#ff0000",
           },
-          "& .orangeCell": {
-            backgroundColor: "#FF6600",
-          },
           "& .rateCell": {
-            backgroundColor: "#ff7f50",
+            backgroundColor: "#edb100",
           },
         },
       },

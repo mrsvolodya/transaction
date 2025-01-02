@@ -6,5 +6,5 @@ export const columns = [
   "Сума 2",
   "Курс",
   "Час",
-  "Клієнт",
+  "Client",
 ];
