@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Transaction } from "../types/Transaction.ts";
 
 export function TransactionProvider({ children }: TransactionProviderProps) {
-  const [isFormOpen, setIsFormOpen] = useState(true);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const { transactions, setTransactions } = useTransactions();
 
   function handleAddTransactions(newTransaction: Transaction) {
