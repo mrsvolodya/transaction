@@ -3,5 +3,7 @@ import { TransactionContextValues } from "../types/TransactionContextValues";
 
 export const TransactionContext = createContext<TransactionContextValues>({
   transactions: [],
-  setTransactions: () => [],
+  isFormOpen: false,
+  setIsFormOpen: () => [],
+  handleAddTransactions: () => [],
 });

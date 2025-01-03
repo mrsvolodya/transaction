@@ -1,11 +1,14 @@
 export type Transaction = {
-  id: number;
-  operation: string;
+  id?: string;
   currency1: string;
-  amount1: number;
   currency2: string;
+  amount1: number;
   amount2: number;
+  operation: string;
+  time?: string;
+  amount?: number;
   rate: number;
-  time: string;
+  amountFromClient?: number;
   client: string;
+  comments?: string;
 };

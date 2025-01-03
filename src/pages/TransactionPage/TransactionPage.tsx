@@ -1,34 +1,44 @@
-import { useState } from "react";
-import { Box, Paper, Stack } from "@mui/material";
+import { useContext } from "react";
+import { Box, Stack } from "@mui/material";
 import { TransactionsTable } from "../../components/TransactionsTable/TransactionsTable";
 import { TableActionButton } from "../../components/ActionButtons/TableActionButton/TableActionButton";
-import { Navigation } from "../../components/Navigation/Navigation";
+import { TransactionForm } from "../../components/TransactionForm/TransactionForm ";
+import { TransactionContext } from "../../context/TransactionContext";
 
 export function TransactionsPage() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  console.log(isFormOpen);
+  const { isFormOpen, setIsFormOpen } = useContext(TransactionContext);
+
   function handleOpenForm() {
     setIsFormOpen(!isFormOpen);
   }
   return (
     <Box>
-      <Stack
-        direction="row"
-        spacing={2}
-        sx={{
-          justifyContent: "space-between",
-          alignItems: "center",
-          margin: "20px",
-        }}
-      >
-        <TableActionButton label="Пошук" handleAction={handleOpenForm} />
-        <TableActionButton label="Додати" handleAction={handleOpenForm} />
-      </Stack>
-      <Paper sx={{ width: "100%", marginTop: "50px" }}>
-        <TransactionsTable />
-      </Paper>
-
-      <Navigation />
+      {isFormOpen ? (
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          height="100vh"
+        >
+          <TransactionForm />
+        </Box>
+      ) : (
+        <Box>
+          <Stack
+            direction="row"
+            spacing={2}
+            sx={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              margin: "20px",
+            }}
+          >
+            <TableActionButton label="Пошук" handleAction={handleOpenForm} />
+            <TableActionButton label="Додати" handleAction={handleOpenForm} />
+          </Stack>
+          <TransactionsTable />
+        </Box>
+      )}
     </Box>
   );
 }

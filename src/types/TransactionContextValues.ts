@@ -1,6 +1,8 @@
 import { Transaction } from "./Transaction";
 
 export type TransactionContextValues = {
+  isFormOpen: boolean;
   transactions: Transaction[];
-  setTransactions: (v: Transaction[]) => void;
+  setIsFormOpen: (v: boolean) => void;
+  handleAddTransactions: (v: Transaction) => void;
 };

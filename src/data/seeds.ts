@@ -1,6 +1,6 @@
 export const transactionsSeed = [
   {
-    id: 1,
+    id: '1',
     operation: "Покупка",
     currency1: "EUR",
     amount1: 400,
@@ -11,7 +11,7 @@ export const transactionsSeed = [
     client: "40564654",
   },
   {
-    id: 2,
+    id: '2',
     operation: "Покупка",
     currency1: "USD",
     amount1: 500,
@@ -22,7 +22,7 @@ export const transactionsSeed = [
     client: "40564655",
   },
   {
-    id: 3,
+    id: '3',
     operation: "Покупка",
     currency1: "GBP",
     amount1: 300,
@@ -33,7 +33,7 @@ export const transactionsSeed = [
     client: "40564656",
   },
   {
-    id: 4,
+    id: '4',
     operation: "Покупка",
     currency1: "JPY",
     amount1: 10000,
@@ -44,7 +44,7 @@ export const transactionsSeed = [
     client: "40564657",
   },
   {
-    id: 5,
+    id: '5',
     operation: "Продажа",
     currency1: "USD",
     amount1: 250,
