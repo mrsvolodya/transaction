@@ -9,7 +9,7 @@ export function TransactionsPage() {
   const { isFormOpen, setIsFormOpen } = useContext(TransactionContext);
 
   function handleOpenForm() {
-    setIsFormOpen(!isFormOpen);
+    setIsFormOpen(true);
   }
   return (
     <Box>

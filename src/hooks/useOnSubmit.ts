@@ -4,14 +4,18 @@ import { normalizeTime } from "../utils/normalizeTime";
 import uuid4 from "uuid4";
 import { TransactionContext } from "../context/TransactionContext";
 
-export function useOnSubmit(data: Transaction) {
-  const {handleAddTransactions, setIsFormOpen} = useContext(TransactionContext)
-  const newTransaction = {
-    ...data,
-    time: normalizeTime(),
-    id: uuid4(),
-  };
+export function useOnSubmit() {
+  const { handleAddTransactions, setIsFormOpen } =
+    useContext(TransactionContext);
 
-  handleAddTransactions(newTransaction);
-  setIsFormOpen(false);
+  return (newOperation: Transaction) => {
+    const newTransaction = {
+      ...newOperation,
+      time: normalizeTime(),
+      id: uuid4(),
+    };
+
+    handleAddTransactions(newTransaction);
+    setIsFormOpen(false);
+  };
 }

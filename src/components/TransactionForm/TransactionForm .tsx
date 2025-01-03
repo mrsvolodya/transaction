@@ -18,10 +18,10 @@ import {
 import { formStyles as styles } from "./TransactionFormStyles/formStyles.ts";
 
 export function TransactionForm() {
+  const onSubmit = useOnSubmit();
   const { control, register, handleSubmit, watch } = useForm<Transaction>({
     defaultValues,
   });
-
   const amount = watch("amount") || 0;
   const rate = watch("rate") || 0;
   const amoundFromClient = watch("amountFromClient") || 0;
@@ -30,7 +30,7 @@ export function TransactionForm() {
 
   return (
     <Box sx={styles.formContainer}>
-      <form onSubmit={handleSubmit(useOnSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Grid2 container rowSpacing={2} columnSpacing={1} size={{ xs: 12 }}>
           {[1, 2].map((index) => (
             <Grid2 key={index} size={{ xs: 6, sm: 6 }} spacing={2}>
