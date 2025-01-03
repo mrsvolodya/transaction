@@ -26,6 +26,7 @@ function LabeledInput(
       <TextField
         id={id}
         size="small"
+        sx={{ height: "10px" }}
         required={required}
         ref={ref}
         {...props}

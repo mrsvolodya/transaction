@@ -19,6 +19,7 @@ import { formStyles as styles } from "./TransactionFormStyles/formStyles.ts";
 
 export function TransactionForm() {
   const onSubmit = useOnSubmit();
+
   const { control, register, handleSubmit, watch } = useForm<Transaction>({
     defaultValues,
   });
@@ -31,9 +32,9 @@ export function TransactionForm() {
   return (
     <Box sx={styles.formContainer}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Grid2 container rowSpacing={2} columnSpacing={1} size={{ xs: 12 }}>
+        <Grid2 container rowSpacing={1} columnSpacing={2} size={{ xs: 12 }}>
           {[1, 2].map((index) => (
-            <Grid2 key={index} size={{ xs: 6, sm: 6 }} spacing={2}>
+            <Grid2 key={index} size={{ xs: 6, sm: 6 }}>
               <CurrencySelector
                 label={`Валюта ${index}`}
                 name={`currency${index}` as keyof Transaction}
