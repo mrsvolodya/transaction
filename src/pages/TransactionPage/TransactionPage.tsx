@@ -33,7 +33,7 @@ export function TransactionsPage() {
               margin: "20px",
             }}
           >
-            <TableActionButton label="Пошук" handleAction={handleOpenForm} />
+            <TableActionButton label="Пошук" handleAction={() => {}} />
             <TableActionButton label="Додати" handleAction={handleOpenForm} />
           </Stack>
           <TransactionsTable />

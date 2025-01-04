@@ -1,4 +1,4 @@
-import { colors } from "../../../theme/generalStyles/colors.ts";
+import { colors } from "../colors.ts";
 export const tableCellStyles = {
   styleOverrides: {
     root: {

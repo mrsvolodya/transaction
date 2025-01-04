@@ -12,7 +12,7 @@ import { Transaction } from "../../types/Transaction.ts";
 import { tableStyles } from "./TableStyles/tableStyles.ts";
 import { TransactionContext } from "../../context/TransactionContext.ts";
 import { getOperationCellStyle } from "../../utils/getOperationCellStyle.ts";
-import { tableCellHeaderStyles } from "./TableStyles/tableCellHeaderStyles.tsx";
+import { tableCellHeaderStyles } from "./TableStyles/tableCellHeaderStyles.ts";
 
 export function TransactionsTable() {
   const { transactions } = useContext(TransactionContext);
