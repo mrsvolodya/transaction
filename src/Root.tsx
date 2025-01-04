@@ -9,7 +9,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 export function Root() {
   return (
-    <Router basename="/transaction">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/:role" element={<RolePage />}>
