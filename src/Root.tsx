@@ -5,7 +5,7 @@ import { HomePage } from "./pages/HomePage/HomePage";
 import { PaydeskPage } from "./pages/PaydeskPage/PaydeskPage";
 import { RolePage } from "./pages/RolePage/RolePage";
 import { TransactionsPage } from "./pages/TransactionPage/TransactionPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 export function Root() {
   return (

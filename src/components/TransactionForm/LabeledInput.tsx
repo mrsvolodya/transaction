@@ -15,7 +15,6 @@ function LabeledInput(
       size={{ xs: 12 }}
       sx={{
         display: "flex",
-
         alignItems: "center",
         justifyContent: "space-between",
       }}
