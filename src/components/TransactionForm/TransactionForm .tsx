@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
 import LabeledInput from "./LabeledInput.tsx";
+import { useOnSubmit } from "../../hooks/useOnSubmit.ts";
 import { Transaction } from "../../types/Transaction.ts";
 import { CurrencySelector } from "./CurrencySelector.tsx";
 import { operations } from "../../constants/operations.ts";
 import { currencies } from "../../constants/currencies.ts";
-import { useOnSubmit } from "../../hooks/useOnSubmit.ts";
 import { colors } from "../../theme/generalStyles/colors.ts";
 import { defaultValues } from "../../constants/defaultValues.ts";
 import {
@@ -25,8 +25,8 @@ export function TransactionForm() {
   });
   const amount = watch("amount") || 0;
   const rate = watch("rate") || 0;
-  const amoundFromClient = watch("amountFromClient") || 0;
   const paymentAmount = Number(amount) * Number(rate);
+  const amoundFromClient = watch("amountFromClient") || 0;
   const change = Number(amoundFromClient) - paymentAmount;
 
   return (

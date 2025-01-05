@@ -8,9 +8,6 @@ export const tableCellStyles = {
       "&:hover": {
         backgroundColor: colors.hoverYellow,
       },
-      "@media (max-width: 390px)": {
-        padding: "12px",
-      },
     },
   },
 };

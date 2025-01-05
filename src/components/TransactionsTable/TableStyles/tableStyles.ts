@@ -1,16 +1,27 @@
 import { colors } from "../../../theme/generalStyles/colors.ts";
 export const tableStyles = {
   boxShadow: "none",
-  borderSpacing: "10px",
+
   borderBlockStyle: "none",
   borderCollapse: "separate",
   backgroundColor: colors.backgroundBlue,
-  "@media (max-width: 390px)": {
-    minWidth: "auto",
-    borderSpacing: "5px",
-    fontSize: "12px",
-    "& td, & th": {
-      fontSize: "12px",
+  borderSpacing: {
+    xs: "5px",
+    sm: "8px",
+    md: "10px",
+    lg: "12px",
+    xl: "14px",
+  },
+
+  "& td, & th": {
+    padding: {
+      xs: "5px",
+      sm: "10px",
+    },
+    fontSize: {
+      xs: "12px",
+      sm: "14px",
+      md: "16px",
     },
   },
 };
