@@ -18,6 +18,8 @@ export function Navigation() {
             disabled={isActive}
             onClick={() => navigate(`${navValue.path}`)}
             sx={{
+              fontSize: "14px",
+              fontFamily: "Arial, sans-serif",
               ...(isActive && { backgroundColor: colors.secondaryRed }),
             }}
           />

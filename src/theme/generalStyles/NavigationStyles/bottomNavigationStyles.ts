@@ -10,5 +10,5 @@ export const bottomNavigationStyles: CSSObject = {
   justifyContent: "center",
   alignItems: "center",
   gap: "10px",
-  paddingInline: "10px",
+  paddingInline: "40px",
 };

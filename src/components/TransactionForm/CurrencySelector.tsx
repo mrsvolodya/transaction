@@ -37,7 +37,7 @@ export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
       <FormControl
         fullWidth={!operation}
         sx={{
-          width: operation ? "62.5%" : "100%",
+          flexBasis: operation ? "55.5%" : "100%",
           backgroundColor: operation
             ? colors.backgroundBlue
             : colors.primaryOrange,

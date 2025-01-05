@@ -9,6 +9,12 @@ export const bottomNavigationActionStyles = {
       "&.Mui-selected": {
         backgroundColor: colors.secondaryRed,
       },
+      "& .MuiBottomNavigationAction-label": {
+        fontSize: "14px",
+        "@media (max-width:600px)": {
+          fontSize: "12px",
+        },
+      },
     },
   },
 };

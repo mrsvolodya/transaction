@@ -15,7 +15,7 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import { formStyles as styles } from "./TransactionFormStyles/formStyles.ts";
+import { formStyles as styles } from "./TransactionFormStyles/FormStyles.ts";
 
 export function TransactionForm() {
   const onSubmit = useOnSubmit();

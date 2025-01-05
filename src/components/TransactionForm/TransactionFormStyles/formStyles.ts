@@ -6,7 +6,6 @@ export const formStyles = {
     paddingBlock: 3,
     paddingInline: 2,
     borderRadius: 1,
-    
     maxWidth: 390,
     margin: "auto",
   },
