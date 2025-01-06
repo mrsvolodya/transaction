@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Box, Stack } from "@mui/material";
+import { TransactionContext } from "../../context/TransactionContext";
+import { TransactionForm } from "../../components/TransactionForm/TransactionForm ";
 import { TransactionsTable } from "../../components/TransactionsTable/TransactionsTable";
 import { TableActionButton } from "../../components/ActionButtons/TableActionButton/TableActionButton";
-import { TransactionForm } from "../../components/TransactionForm/TransactionForm ";
-import { TransactionContext } from "../../context/TransactionContext";
 
 export function TransactionsPage() {
   const { isFormOpen, setIsFormOpen } = useContext(TransactionContext);

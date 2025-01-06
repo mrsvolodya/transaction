@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { buttonStyles } from "./generalStyles/buttonStyles";
 import { orange, red, blue, green, yellow } from "@mui/material/colors";
 
 const baseTheme = createTheme({
@@ -21,13 +20,22 @@ const baseTheme = createTheme({
 
 export const theme = createTheme(baseTheme, {
   components: {
-    MuiButton: buttonStyles,
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "black",
+          height: "35px",
+          width: "100px",
+          fontSize: "12px",
+          textTransform: "none",
+        },
+      },
+    },
     MuiTable: {
       styleOverrides: {
         root: {
           boxShadow: "none",
           borderBlockStyle: "none",
-          borderCollapse: "separate",
           borderSpacing: "5px",
 
           [baseTheme.breakpoints.up("sm")]: {

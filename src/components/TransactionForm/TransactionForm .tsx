@@ -6,6 +6,7 @@ import { CurrencySelector } from "./CurrencySelector.tsx";
 import { operations } from "../../constants/operations.ts";
 import { currencies } from "../../constants/currencies.ts";
 import { defaultValues } from "../../constants/defaultValues.ts";
+import CloseIcon from "@mui/icons-material/Close";
 import {
   Box,
   Button,
@@ -14,9 +15,12 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
+import { useContext } from "react";
+import { TransactionContext } from "../../context/TransactionContext.ts";
 
 export function TransactionForm() {
   const onSubmit = useOnSubmit();
+  const { handleClose } = useContext(TransactionContext);
 
   const { control, register, handleSubmit, watch } = useForm<Transaction>({
     defaultValues,
@@ -28,7 +32,28 @@ export function TransactionForm() {
   const change = Number(amoundFromClient) - paymentAmount;
 
   return (
-    <Box bgcolor="primary.light" padding={3} width={400} borderRadius={1}>
+    <Box
+      bgcolor="primary.light"
+      padding={3}
+      width={400}
+      borderRadius={1}
+      sx={{
+        position: "relative",
+      }}
+    >
+      <Button
+        sx={{
+          position: "absolute",
+          top: 5,
+          right: -20,
+          bottom: 0,
+          width: 10,
+          height: 10,
+        }}
+        onClick={handleClose}
+      >
+        <CloseIcon />
+      </Button>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid2 container rowSpacing={1} columnSpacing={2} size={{ xs: 12 }}>
           {[1, 2].map((index) => (
