@@ -1,9 +1,9 @@
 import React from "react";
-import { colors } from "../../theme/generalStyles/colors.ts";
 import { Controller, Control } from "react-hook-form";
 import { Transaction } from "../../types/Transaction.ts";
 import {
   Box,
+  colors,
   FormControl,
   InputLabel,
   MenuItem,
@@ -38,9 +38,7 @@ export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
         fullWidth={!operation}
         sx={{
           flexBasis: operation ? "55.5%" : "100%",
-          backgroundColor: operation
-            ? colors.backgroundBlue
-            : colors.primaryOrange,
+          backgroundColor: operation ? colors.blue : colors.orange,
           position: "relative",
         }}
         size="small"

@@ -1,13 +1,22 @@
 import { createTheme } from "@mui/material";
-import { palette } from "./palette";
 import { buttonStyles } from "./generalStyles/buttonStyles";
 import { tableCellStyles } from "./generalStyles/tableStyles/tableCellStyles.ts";
 import { tableRowStyles } from "./generalStyles/tableStyles/tableRowStyles.ts";
-import { bottomNavigationStyles } from "./generalStyles/NavigationStyles/bottomNavigationStyles.ts";
-import { bottomNavigationActionStyles } from "./generalStyles/NavigationStyles/bottomNavigationActionStyles.ts";
+import { orange, red, blue } from "@mui/material/colors";
 
 export const theme = createTheme({
-  palette,
+  palette: {
+    primary: {
+      main: orange[500],
+      light: blue[500],
+    },
+    secondary: {
+      main: red[500],
+    },
+    background: {
+      default: blue[500],
+    },
+  },
   typography: {
     fontSize: 12,
     body1: {
@@ -21,12 +30,5 @@ export const theme = createTheme({
     MuiButton: buttonStyles,
     MuiTableCell: tableCellStyles,
     MuiTableRow: tableRowStyles,
-    MuiBottomNavigation: {
-      styleOverrides: {
-        root: bottomNavigationStyles,
-      },
-    },
-
-    MuiBottomNavigationAction: bottomNavigationActionStyles,
   },
 });

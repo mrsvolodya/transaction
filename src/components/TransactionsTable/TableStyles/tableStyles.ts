@@ -1,10 +1,8 @@
-import { colors } from "../../../theme/generalStyles/colors.ts";
 export const tableStyles = {
   boxShadow: "none",
 
   borderBlockStyle: "none",
   borderCollapse: "separate",
-  backgroundColor: colors.backgroundBlue,
   borderSpacing: {
     xs: "5px",
     sm: "8px",
