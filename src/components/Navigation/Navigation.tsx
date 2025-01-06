@@ -15,7 +15,7 @@ export function Navigation() {
         bottom: 0,
         right: 0,
         left: 0,
-        bgcolor: "primary.light",
+        bgcolor: "primary.dark",
         alignItems: "center",
         gap: "10px",
         px: "20px",

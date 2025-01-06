@@ -1,7 +1,6 @@
-import { colors } from "../theme/generalStyles/colors.ts";
 export const getOperationCellStyle = (operation: string) => {
   if (operation === "Продажа") {
-    return colors.redCell;
+    return "secondary.main";
   }
-  return colors.greenCell;
+  return "secondary.light";
 };

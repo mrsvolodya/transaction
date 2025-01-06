@@ -12,7 +12,6 @@ import { Transaction } from "../../types/Transaction.ts";
 import { tableStyles } from "./TableStyles/tableStyles.ts";
 import { TransactionContext } from "../../context/TransactionContext.ts";
 import { getOperationCellStyle } from "../../utils/getOperationCellStyle.ts";
-import { tableCellHeaderStyles } from "./TableStyles/tableCellHeaderStyles.ts";
 
 export function TransactionsTable() {
   const { transactions } = useContext(TransactionContext);
@@ -23,7 +22,7 @@ export function TransactionsTable() {
         <TableHead>
           <TableRow>
             {columns.map((column) => (
-              <TableCell key={column} sx={tableCellHeaderStyles}>
+              <TableCell key={column} sx={{ bgcolor: "primary.dark" }}>
                 {column}
               </TableCell>
             ))}
@@ -35,7 +34,7 @@ export function TransactionsTable() {
               <TableRow hover key={trans.id}>
                 <TableCell
                   sx={{
-                    backgroundColor: getOperationCellStyle(trans.operation),
+                    bgcolor: getOperationCellStyle(trans.operation),
                   }}
                 >
                   {trans.operation}
@@ -44,7 +43,9 @@ export function TransactionsTable() {
                 <TableCell>{trans.amount1}</TableCell>
                 <TableCell>{trans.currency2}</TableCell>
                 <TableCell>{trans.amount2}</TableCell>
-                <TableCell className="rateCell">{trans.rate}</TableCell>
+                <TableCell sx={{ bgcolor: "primary.light" }}>
+                  {trans.rate}
+                </TableCell>
                 <TableCell>{trans.time}</TableCell>
                 <TableCell>{trans.client}</TableCell>
               </TableRow>
