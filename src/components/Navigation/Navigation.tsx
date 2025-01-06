@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { navigationValues } from "../../constants/navigationValues";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
-import { theme } from "../../theme/theme.ts";
 
 export function Navigation() {
   const navigate = useNavigate();
@@ -30,11 +29,11 @@ export function Navigation() {
             disabled={isActive}
             onClick={() => navigate(`${navValue.path}`)}
             sx={{
-              backgroundColor: theme.palette.primary.main,
+              backgroundColor: "primary.main",
               height: "40px",
               borderRadius: "40px",
               ...(isActive && {
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: "secondary.main",
               }),
             }}
           />

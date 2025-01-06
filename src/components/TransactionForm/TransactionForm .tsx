@@ -5,7 +5,6 @@ import { Transaction } from "../../types/Transaction.ts";
 import { CurrencySelector } from "./CurrencySelector.tsx";
 import { operations } from "../../constants/operations.ts";
 import { currencies } from "../../constants/currencies.ts";
-import { colors } from "../../theme/generalStyles/colors.ts";
 import { defaultValues } from "../../constants/defaultValues.ts";
 import {
   Box,
@@ -15,7 +14,6 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import { formStyles as styles } from "./TransactionFormStyles/FormStyles.ts";
 
 export function TransactionForm() {
   const onSubmit = useOnSubmit();
@@ -30,7 +28,7 @@ export function TransactionForm() {
   const change = Number(amoundFromClient) - paymentAmount;
 
   return (
-    <Box sx={styles.formContainer}>
+    <Box bgcolor="primary.light" padding={3} width={400} borderRadius={1}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid2 container rowSpacing={1} columnSpacing={2} size={{ xs: 12 }}>
           {[1, 2].map((index) => (
@@ -46,8 +44,8 @@ export function TransactionForm() {
                 type="number"
                 size="small"
                 sx={{
-                  backgroundColor: colors.primaryOrange,
-                  marginTop: "10px",
+                  bgcolor: "primary.main",
+                  mt: "10px",
                 }}
                 {...register(`amount${index}` as keyof Transaction, {
                   required: true,
@@ -56,7 +54,7 @@ export function TransactionForm() {
             </Grid2>
           ))}
 
-          <Grid2 size={{ xs: 12 }} sx={styles.gridItem}>
+          <Grid2 size={{ xs: 12 }}>
             <CurrencySelector
               label="Операція"
               name="operation"
@@ -70,34 +68,34 @@ export function TransactionForm() {
             label="Сума"
             id="amount"
             type="number"
-            sx={{ backgroundColor: colors.backgroundBlue }}
+            sx={{ bgcolor: "primary.dark" }}
             {...register("amount")}
           />
           <LabeledInput
             label="Курс"
             id="rate"
-            sx={{ backgroundColor: colors.backgroundBlue }}
+            sx={{ bgcolor: "primary.dark" }}
             {...register("rate", { required: true })}
           />
           <LabeledInput
             label="Сума від клієнта"
             id="amountFromClient"
             type="number"
-            sx={{ backgroundColor: colors.backgroundBlue }}
+            sx={{ bgcolor: "primary.dark" }}
             {...register("amountFromClient")}
           />
           <LabeledInput
             label="Клієнт"
             id="client"
             type="text"
-            sx={{ backgroundColor: colors.backgroundBlue }}
+            sx={{ bgcolor: "primary.dark" }}
             {...register("client", { required: true })}
           />
           <LabeledInput
             label="Коментарі"
             id="comments"
             type="text"
-            sx={{ backgroundColor: colors.backgroundBlue }}
+            sx={{ bgcolor: "primary.dark" }}
             {...register("comments")}
           />
         </Grid2>
@@ -106,7 +104,16 @@ export function TransactionForm() {
           <Typography>Здача: {change}</Typography>
         </Stack>
 
-        <Button type="submit" fullWidth sx={styles.submitButton}>
+        <Button
+          type="submit"
+          fullWidth
+          sx={{
+            display: "flex",
+            bgcolor: "secondary.light",
+            mx: "auto",
+            width: "50%",
+          }}
+        >
           Зберегти
         </Button>
       </form>

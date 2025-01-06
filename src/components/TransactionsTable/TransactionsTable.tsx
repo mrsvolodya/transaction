@@ -31,7 +31,7 @@ export function TransactionsTable() {
         <TableBody>
           {transactions.map((trans: Transaction) => {
             return (
-              <TableRow hover key={trans.id}>
+              <TableRow key={trans.id}>
                 <TableCell
                   sx={{
                     bgcolor: getOperationCellStyle(trans.operation),

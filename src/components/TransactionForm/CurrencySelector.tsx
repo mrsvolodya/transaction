@@ -3,7 +3,6 @@ import { Controller, Control } from "react-hook-form";
 import { Transaction } from "../../types/Transaction.ts";
 import {
   Box,
-  colors,
   FormControl,
   InputLabel,
   MenuItem,
@@ -37,8 +36,8 @@ export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
       <FormControl
         fullWidth={!operation}
         sx={{
-          flexBasis: operation ? "55.5%" : "100%",
-          backgroundColor: operation ? colors.blue : colors.orange,
+          flexBasis: operation ? "63%" : "100%",
+          backgroundColor: operation ? "primary.dark" : "primary.main",
           position: "relative",
         }}
         size="small"
