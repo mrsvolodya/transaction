@@ -17,15 +17,7 @@ export const theme = createTheme({
       default: blue[500],
     },
   },
-  typography: {
-    fontSize: 12,
-    body1: {
-      fontSize: "14px",
-    },
-    button: {
-      fontSize: "18px",
-    },
-  },
+
   components: {
     MuiButton: buttonStyles,
     MuiTableCell: tableCellStyles,
