@@ -39,6 +39,7 @@ export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
           flexBasis: operation ? "63%" : "100%",
           backgroundColor: operation ? "primary.dark" : "primary.main",
           position: "relative",
+          border: "none",
         }}
         size="small"
       >
@@ -50,6 +51,7 @@ export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
               top: "-20px",
               left: "50%",
               transform: "translateX(-50%)",
+              padding: "0 4px",
             }}
           >
             {label}
@@ -62,9 +64,11 @@ export const CurrencySelector: React.FC<CurrencySelectorProps> = ({
           render={({ field }) => (
             <Select
               {...field}
+              labelId={label}
               id={name}
-              label={label}
-              value={field.value || ""}
+              sx={{
+                border: "none",
+              }}
             >
               {options.map((option) => (
                 <MenuItem key={option} value={option}>

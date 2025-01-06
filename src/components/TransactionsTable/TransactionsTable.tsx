@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { columns } from "../../constants/columns.ts";
 import { Transaction } from "../../types/Transaction.ts";
-import { tableStyles } from "./TableStyles/tableStyles.ts";
 import { TransactionContext } from "../../context/TransactionContext.ts";
 import { getOperationCellStyle } from "../../utils/getOperationCellStyle.ts";
 
@@ -18,7 +17,7 @@ export function TransactionsTable() {
 
   return (
     <TableContainer>
-      <Table stickyHeader aria-label="sticky table" sx={tableStyles}>
+      <Table stickyHeader aria-label="sticky table">
         <TableHead>
           <TableRow>
             {columns.map((column) => (
